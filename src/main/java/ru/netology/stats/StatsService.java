@@ -49,19 +49,46 @@ public class StatsService {
 
 
     public int minAverageSales(long[] sales) {
-        int averageAmount = averageAmountSales(sales);
-        int mounthNumber = 0;
-        int mounthMinAverage = 0;
 
-        for (int i = mounthNumber; i < sales.length; i++) {
-            if (sales[i] <= sales[averageAmount]) {
-                mounthMinAverage = mounthNumber + 1;
+        int amount = 0;
+        int average;
+        for (int i = 0; i < sales.length; i++) {
+            amount += sales[i];
+        }
+        average = amount / sales.length;
+
+
+        int mounthNumber = 0;
+
+        for (int i = 0; i < sales.length; i++) {
+            if (sales[i] <= average) {
+                mounthNumber = mounthNumber + 1;
             }
         }
-        return mounthMinAverage;
+        return mounthNumber;
     }
 
 
-    
+    public int maxAverageSales(long[] sales) {
+        int amount = 0;
+        int average;
+        for (int i = 0; i < sales.length; i++) {
+            amount += sales[i];
+        }
+        average = amount / sales.length;
+
+
+        int mounthNumber = 0;
+
+        for (int i = 0; i < sales.length; i++) {
+            if (sales[i] > average) {
+                mounthNumber = mounthNumber + 1;
+            }
+        }
+        return mounthNumber;
+    }
+
+
+
 
 }

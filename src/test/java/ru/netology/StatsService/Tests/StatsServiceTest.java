@@ -71,4 +71,16 @@ public class StatsServiceTest {
         Assertions.assertEquals(expectedMinAverageSales, actualMinAverageSales);
     }
 
+    @Test
+    public void shouldFindMaxAverageSales() {
+        StatsService service = new StatsService();
+
+        long[] sales = {8, 15, 13, 15, 17, 20, 19, 18, 7, 14, 14, 16};
+
+        int expectedMaxAverageSales = 7;
+        int actualMaxAverageSales = service.maxAverageSales(sales);
+
+        Assertions.assertEquals(expectedMaxAverageSales, actualMaxAverageSales);
+    }
+
 }
