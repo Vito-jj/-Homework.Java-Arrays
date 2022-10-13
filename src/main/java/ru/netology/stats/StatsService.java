@@ -28,67 +28,41 @@ public class StatsService {
         return maxMonth + 1;
     }
 
-    public int amountSales(long[] sales) {
-        int amount = 0;
-        for (int i = 0; i < sales.length; i++) {
-            amount += sales[i];
+    public long amountSales(long[] sales) {
+        long amount = 0;
+        for (long sale : sales) {
+            amount += sale;
         }
         return amount;
     }
 
 
-    public int averageAmountSales(long[] sales) {
-        int amount = 0;
-        int average;
-        for (int i = 0; i < sales.length; i++) {
-            amount += sales[i];
-        }
-        average = amount / sales.length;
-        return average;
+    public long averageAmountSales(long[] sales) {
+        return amountSales(sales) / 12;
     }
 
 
     public int minAverageSales(long[] sales) {
-
-        int amount = 0;
-        int average;
-        for (int i = 0; i < sales.length; i++) {
-            amount += sales[i];
-        }
-        average = amount / sales.length;
-
-
-        int mounthNumber = 0;
-
-        for (int i = 0; i < sales.length; i++) {
-            if (sales[i] <= average) {
-                mounthNumber = mounthNumber + 1;
+        long average = averageAmountSales(sales);
+        int count = 0;
+        for (long sale : sales) {
+            if (sale < average){
+                count++;
             }
         }
-        return mounthNumber;
+        return count;
     }
 
 
     public int maxAverageSales(long[] sales) {
-        int amount = 0;
-        int average;
-        for (int i = 0; i < sales.length; i++) {
-            amount += sales[i];
-        }
-        average = amount / sales.length;
-
-
-        int mounthNumber = 0;
-
-        for (int i = 0; i < sales.length; i++) {
-            if (sales[i] > average) {
-                mounthNumber = mounthNumber + 1;
+        long average = averageAmountSales(sales);
+        int count = 0;
+        for (long sale : sales) {
+            if (sale > average){
+                count++;
             }
         }
-        return mounthNumber;
+        return count;
     }
-
-
-
 
 }

@@ -121,9 +121,9 @@
       <list>
         <item itemvalue="JUnit.StatsServiceTest.shouldFindMaxAverageSales" />
         <item itemvalue="JUnit.StatsServiceTest.shouldFindMinAverageSales" />
+        <item itemvalue="JUnit.StatsServiceTest.shouldFindAmountSales" />
         <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.StatsServiceTest.shouldFindAverageAmountSales" />
-        <item itemvalue="JUnit.StatsServiceTest.shouldFindAmountSales" />
       </list>
     </recent_temporary>
   </component>
@@ -136,7 +136,9 @@
       <option name="presentableId" value="Default" />
       <updated>1664564639519</updated>
       <workItem from="1664564644659" duration="10549000" />
-      <workItem from="1664610651380" duration="1570000" />
+      <workItem from="1664610651380" duration="3135000" />
+      <workItem from="1664616311553" duration="2639000" />
+      <workItem from="1665683362130" duration="3734000" />
     </task>
     <servers />
   </component>
